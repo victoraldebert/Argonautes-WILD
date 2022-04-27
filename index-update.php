@@ -1,38 +1,38 @@
 <?php
 
-include 'config.php';
+include 'config.php';               
 
 $id = $_GET['edit'];
 
-if(isset($_POST['update_product'])){
+// if(isset($_POST['update_product'])){
 
-   $argo_name = $_POST['argo_name'];
+//    $argo_name = $_POST['argo_name'];
 
-   if(empty($argo_name)){
-      $message[] = 'Remplissez le champ';    
-   }else{
+//    if(empty($argo_name)){
+//       $message[] = 'please fill out all!';    
+//    }else{
 
-      $update_data = "UPDATE names SET name='$argo_name' WHERE id = '$id'";
-      $upload = mysqli_query($conn, $update_data);
+//       $update_data = "UPDATE names SET name='$argo_name' WHERE id = '$id'";
+//       $upload = mysqli_query($conn, $update_data);
 
-      if($upload){
-         header('location:admin_page.php');
-      }else{
-         $$message[] = 'Remplissez le champ'; 
-      }
-
-   }
-};
+//       if($upload){
+//          move_uploaded_file($product_image_tmp_name, $product_image_folder);
+//          header('location:index.php');
+//       }else{
+//          $$message[] = 'please fill out all!'; 
+//       }
+//    }
+// };
 
 ?>
 
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -46,23 +46,12 @@ if(isset($_POST['update_product'])){
 
 <div class="container">
 
-
 <div class="admin-product-form-container centered">
 
    <?php
-      
       $select = mysqli_query($conn, "SELECT * FROM names WHERE id = '$id'");
       while($row = mysqli_fetch_assoc($select)){
-
    ?>
-   
-   <form action="" method="post" enctype="multipart/form-data">
-      <!-- <h3 class="title">Mettre à jour le produit</h3> -->
-      <input type="text" class="box" name="argo_name" value="<?php echo $row['name']; ?>" placeholder="Entrez le nom du membres">
-      <!-- <a href="admin_page.php" class="btn">Revenir en arrière</a> -->
-   </form>
-
-   <?php }; ?>
 
 </div>
 
