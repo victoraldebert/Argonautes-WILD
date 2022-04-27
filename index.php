@@ -1,3 +1,35 @@
+<?php
+   include 'config.php';
+
+if(isset($_POST['add_name'])){
+
+   $argo_name = $_POST['argo_name'];
+   
+
+   if(empty($argo_name)){
+      $message[] = 'Veuillez remplir le champs';
+   }else{
+      $insert = "INSERT INTO names(name) VALUES('$argo_name')";
+      $upload = mysqli_query($conn,$insert);
+      if($upload){
+         $message[] = 'Nouveau Argonautes ajouté !';
+      }else{
+         $message[] = 'Problême d\'ajout';
+      }
+   }
+
+};
+
+if(isset($_GET['delete'])){
+   $id = $_GET['delete'];
+   mysqli_query($conn, "DELETE FROM names WHERE id = $id");
+   header('location: admin_page.php');
+};
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,19 +55,16 @@
   
   <!-- New member form -->
   <h2>Ajouter un(e) Argonaute</h2>
-  <form class="new-member-form">
+  <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
     <label for="name">Nom de l&apos;Argonaute</label>
-    <input id="name" name="name" type="text" placeholder="Charalampos" />
-    <button type="submit">Envoyer</button>
+    <!-- Pas sûr de lutilité du class box -->
+    <input type="text" name="argo_name" placeholder="Charalampos" class="box" />    
+
+    <button type="submit" class="btn" name="add_name">Envoyer</button>
   </form>
   
   <!-- Member list -->
-  <h2>Membres de l'équipage</h2>
-  <section class="member-list">
-    <div class="member-item">Eleftheria</div>
-    <div class="member-item">Gennadios</div>
-    <div class="member-item">Lysimachos</div>
-  </section>
+  
 </main>
 
 <footer>
