@@ -1,4 +1,5 @@
 <?php
+ 
    include 'config.php';
 
 if(isset($_POST['add_name'])){
@@ -37,7 +38,7 @@ if(isset($_GET['delete'])){
    <title>Argonautes</title>
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="public.css">
 
 </head>
 <!-- Header section -->
