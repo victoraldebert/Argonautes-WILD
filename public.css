@@ -80,6 +80,13 @@ h1, h2 {
   max-width: 960px;
   margin: 0 auto;
 }
+.table-head {
+  text-align: center;
+}
+.product-display {
+  margin-top: 4rem;
+  column-count: 3;
+}
 
 footer {
   margin-top: 2em;
@@ -87,10 +94,6 @@ footer {
   color: #fff;
   background: #f76c6c;
   padding: 0.25em 0;
-  margin-top: 40rem;
+  margin-top: 30rem;
 }
 
-.product-display {
-  margin-top: 4rem;
-  column-count: 3;
-}

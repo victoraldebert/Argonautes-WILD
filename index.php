@@ -1,6 +1,6 @@
 <?php
  
-   include 'config.php';
+   require 'config.php';
 
 if(isset($_POST['add_name'])){
 
@@ -67,13 +67,16 @@ if(isset($_GET['delete'])){
    $select = mysqli_query($conn, "SELECT * FROM names");
    
    ?>
+
+   <p class="table-head">Membres de l'équipage</p>
+
    <div class="product-display">
       <table class="product-display-table">
-         <thead>
-         <tr>
+         <!-- <thead> -->
+         <!-- <tr>
             <th>Membres de l'équipage</th>
-         </tr>
-         </thead>
+         </tr> -->
+         <!-- </thead> -->
          <?php while($row = mysqli_fetch_assoc($select)){ ?>
          <tr>
             <td><?php echo $row['name']; ?></td>
