@@ -38,7 +38,7 @@ if(isset($_GET['delete'])){
    <title>Argonautes</title>
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="public.css">
+   <link rel="stylesheet" href="style.css">
 
 </head>
 <!-- Header section -->
@@ -68,7 +68,7 @@ if(isset($_GET['delete'])){
    
    ?>
 
-   <p class="table-head">Membres de l'équipage</p>
+   <h4 class="table-head">Membres de l'équipage :</h4>
 
    <div class="product-display">
       <table class="product-display-table">
