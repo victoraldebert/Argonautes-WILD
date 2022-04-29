@@ -103,7 +103,11 @@ h3 {
   margin-left: 9rem;
   font-size: 16px;
 }
-
+@media screen and (max-width: 640px) {
+  .product-display {
+    margin-left: 0;
+  }
+}
 footer {
   margin-top: 2em;
   text-align: center;
@@ -111,7 +115,7 @@ footer {
   background: #f76c6c;
   padding: 0.25em 0;
   margin-right: -8px;
-  margin-top: 9rem;
+  margin-top: 14rem;
   margin-bottom: -8px;
   margin-left: -8px;
 }

@@ -11,20 +11,8 @@ if(isset($_POST['add_name'])){
    }else{
       $insert = "INSERT INTO names(name) VALUES('$argo_name')";
       $upload = mysqli_query($conn,$insert);
-      if($upload){
-         move_uploaded_file($product_image_tmp_name, $product_image_folder);
-         $message[] = 'Nouveau Argonautes ajouté !';
-      }else{
-         $message[] = 'Problême d\'ajout';
-      }
    }
 
-};
-
-if(isset($_GET['delete'])){
-   $id = $_GET['delete'];
-   mysqli_query($conn, "DELETE FROM names WHERE id = $id");
-   header('location: index.php');
 };
 
 ?>
@@ -36,8 +24,6 @@ if(isset($_GET['delete'])){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Argonautes</title>
-
-   <!-- custom css file link  -->
    <link rel="stylesheet" href="style.css">
 
 </head>
@@ -55,9 +41,9 @@ if(isset($_GET['delete'])){
    <div class="admin-product-form-container">
 
       <form action="<?php $_SERVER['PHP_SELF'] ?>" method="post" enctype="multipart/form-data">
-         <h3>Ajouter un nouveau membres</h3>
-         <input type="text" placeholder="Entrer le nom du nouveau membres" name="argo_name" class="box">
-         <input type="submit" class="btn" name="add_name" value="Enregistrer l'Argonautes">
+         <h3>Ajouter un nouveau membre</h3>
+         <input type="text" placeholder="Entrer un nom" name="argo_name" class="box">
+         <input type="submit" class="btn" name="add_name" value="Enregistrer l'Argonaute">
       </form>
 
    </div>
@@ -72,15 +58,9 @@ if(isset($_GET['delete'])){
 
    <div class="product-display">
       <table class="product-display-table">
-         <!-- <thead> -->
-         <!-- <tr>
-            <th>Membres de l'équipage</th>
-         </tr> -->
-         <!-- </thead> -->
          <?php while($row = mysqli_fetch_assoc($select)){ ?>
          <tr>
             <td><?php echo $row['name']; ?></td>
-           
          </tr>
       <?php } ?>
       </table>
@@ -89,6 +69,6 @@ if(isset($_GET['delete'])){
 </div>
 
 <footer>
-  <p>Réalisé par Jason en Anthestérion de l'an 515 avant JC</p>
+  <p>Réalisé par Victor en Anthestérion de l'an 515 avant JC</p>
 </footer>
 </html>
