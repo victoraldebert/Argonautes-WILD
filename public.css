@@ -1,56 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
 
-/* body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-main {
-  max-width: 960px;
-  margin: 0 auto;
-}
-
-header {
-  background: #f4f4f4;
-  text-align: center;
-  padding: 2em;
-}
-
-header img {
-  max-width: 96px;
-}
-
-header h1 {
-  font-size: 2.5em;
-}
-
-h1, h2 {
-  text-align: center;
-}
-
-label {
-  display: block;
-  margin-bottom: 0.5em;
-}
-
-.new-member-form {
-  margin: 2em 0 4em 0;
-  text-align: center;
-}
-
-.member-item {
-  padding: 0.25em 0;
-}
-*/
 * {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
 header {
   background: #f4f4f4;
   text-align: center;
   padding: 2em;
   margin: -1rem;
 }
+
 header img {
   max-width: 96px;
 }
@@ -62,10 +22,10 @@ header h1 {
 h1, h2 {
   text-align: center;
 }
+
 h3 {
   margin: 3rem;
   font-size: 24px;
-
 }
 
 .btn {
@@ -79,39 +39,45 @@ h3 {
   font-size: 15px;
   transition: 0.7s;
 }
+
 .btn:hover {
   background-color: #f4f4f4;
   color: #f76c6c;
   border: 2px solid #f76c6c;
 }
+
 .box {
   font-size: 15px;
   padding: 4px;
   margin-right: 4px;
-  
 }
+
 .argon_name {
   padding: 8px;
   border-radius: 33px;
   border-color: grey;
 }
+
 .container {
   text-align: center;
   max-width: 960px;
   margin: 0 auto;
 }
+
 .table-head {
   text-align: center;
   margin: 2rem;
-  margin-top: 10rem;
+  margin-top: 8rem;
   font-size: 20px;
 }
+
 .product-display {
   column-count: 3;
   margin-top: 3rem;
   margin-left: 9rem;
   font-size: 16px;
 }
+
 @media screen and (max-width: 640px) {
   .product-display {
     margin-left: 0;
