@@ -73,12 +73,21 @@ h3 {
   border: none;
   color: white;
   padding: 8px;
+  margin: 4px;
   background-color: #f76c6c;
   cursor: pointer;
   font-size: 15px;
+  transition: 0.7s;
+}
+.btn:hover {
+  background-color: #f4f4f4;
+  color: #f76c6c;
+  border: 2px solid #f76c6c;
 }
 .box {
   font-size: 15px;
+  padding: 4px;
+  margin-right: 4px;
   
 }
 .argon_name {
