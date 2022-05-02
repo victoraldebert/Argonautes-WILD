@@ -2,14 +2,9 @@
    require 'config.php';
 // PHP du formaulaire
 if(isset($_POST['add_name'])){
-
    $argo_name = $_POST['argo_name'];
-
-   if(empty($argo_name)){
-   }else{
-      $insert = "INSERT INTO names(name) VALUES('$argo_name')";
-      $upload = mysqli_query($conn,$insert);
-   }
+   $insert = "INSERT INTO names(name) VALUES('$argo_name')";
+   $upload = mysqli_query($conn,$insert);
 };
 ?>
 
@@ -25,9 +20,8 @@ if(isset($_POST['add_name'])){
 
 <header>
   <h1>
-    <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo" />
-    Les Argonautes
-  </h1>
+     <img src="https://www.wildcodeschool.com/assets/logo_main-e4f3f744c8e717f1b7df3858dce55a86c63d4766d5d9a7f454250145f097c2fe.png" alt="Wild Code School logo">Les Argonautes
+   </h1>
 </header>
 
 <div class="container">
@@ -57,7 +51,6 @@ if(isset($_POST['add_name'])){
       <?php } ?>
       </table>
    </div>
-
 </div>
 
 <footer>
