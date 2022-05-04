@@ -31,7 +31,7 @@ h3 {
 
 .btn {
   border-radius: 19px;
-  border: none;
+  border: 1px solid #f76c6c;
   color: white;
   padding: 8px;
   margin: 4px;
