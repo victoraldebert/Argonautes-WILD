@@ -82,15 +82,12 @@ h3 {
 
 /* ////FOOTER///// */
 footer {
-  margin-top: 2em;
+  margin-top: 12em;
   text-align: center;
   color: #fff;
   background: #f76c6c;
   padding: 0.25em 0;
-  margin-right: -8px;
-  margin-top: 14rem;
-  margin-bottom: -8px;
-  margin-left: -8px;
+  width: 100%;
 }
 
 
